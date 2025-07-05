@@ -1,0 +1,389 @@
+body{
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+          background-image: url('bg.jpg');
+          background-size: cover;
+     }
+
+header{
+          background-color: rgba(0, 51, 102, 0.5); /* This makes it 50% transparent */
+          color: #fff;
+          text-align: center;
+          padding: 20px;
+       }
+
+header h1{
+          font-size: 36px;
+         }
+
+.container{
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: rgba(100, 149, 237, 0.5);/* rgba(230, 247, 255, 0.5);  0.5 makes it 50% transparent and Change this to the color you want */
+            padding: 20px 60px 20px 60px; /* 30px top, 50px right, 20px bottom, 50px left */
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: justify;
+        }
+
+.profile-container {
+                        max-width: 1200px;
+                        margin: 20px auto;
+                        padding: 20px;
+                        border-radius: 5px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        display: flex;
+                        align-items: flex-start;
+                   }
+
+.profile-photo{
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                margin-right: 20px;
+                background: #ccc; /* Placeholder background color */
+              }
+
+.profile-info{
+                flex: 1;
+                text-align: left;
+             }
+
+/* Apply some basic styles to the columns */
+    
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+
+.clmn {
+            display: flex;
+        }
+
+        
+.column {
+            flex: 1;
+            float: left;
+            padding: 10px;
+        }
+.left {
+  width: 60%;
+align-self: flex-start;
+}
+
+.right {
+  width: 40%;
+  vertical-align: bottom;
+  align-self: flex-end;
+}
+        .column:first-child {
+            align-self: flex-start;
+        }
+
+        .column:last-child {
+            align-self: flex-end;
+            justify-self: end;
+        }
+
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .clmn {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+
+/* Style the collapsible button */
+
+.collapsible{
+               background-color: rgba(0, 51, 102, 0.5);
+               color: rgba(100, 149, 237, 0.5);;
+               cursor: pointer;
+               padding: 12px;
+               width: 100%;
+               border: none;
+               text-align: left;
+               outline: none;
+               font-size: 18px;
+            }
+
+.collapsible:hover{
+                     background-color: rgba(0,51,102,0.6);
+                  }
+
+/* Add a symbol (plus/minus) before the button text */
+
+.collapsible::before {
+                        content: "\02795"; /* Unicode character for right-pointing triangle (closed) */
+                        float: right;
+                     }
+
+/* Style the symbol when the collapsible content is open */
+        
+.active::before {
+                    content: "\2796"; /* Unicode character for right-pointing triangle (open) */
+                }
+
+
+
+/* Style the collapsible content */
+
+.content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.01);
+        }
+
+/* Subheading style */
+
+sh {
+      text-decoration: none;
+      color: #059DC6;
+   }
+
+/* Collapsible Subheading style */
+
+csh {
+      text-decoration: none;
+      color: rgb(255,255,255);
+    }
+
+.details {
+            margin-top: 20px;
+         }
+        
+.details h2 {
+                font-size: 24px;
+                color: #007BFF;
+            }
+        
+.details p {
+                font-size: 16px;
+                line-height: 1.6;
+           }
+
+
+/* Apply margin or padding to list items to create gaps */
+
+ol {
+            list-style: decimal;
+            padding: 20px 40px 20px 40px; /* 20px top, 40px right, 20px bottom, 40px left */
+   }
+
+li {
+            text-align: justify;
+            margin-bottom: 10px; /* Adjust this value to control the gap */
+   }
+
+
+/* CSS rule to add padding to a specific paragraph */
+       
+.padded-paragraph {
+                        padding: 20px 60px 20px 60px; /* 20px top, 60px right, 20px bottom, 60px left */
+                  }
+
+/* Add a media query for screens with a maximum width of 768px */
+
+
+@media (max-width: 768px) {
+
+.container {
+                padding: 20px; /* Adjust the padding for smaller screens */
+           }
+
+.profile-container {
+                        flex-direction: column; /* Stack the profile elements on smaller screens */
+                        align-items: center;
+                   }
+
+.profile-photo {
+                    margin-right: 0;
+                    margin-bottom: 20px;
+               }
+
+.column {
+            width: 100%; /* Make columns occupy the full width on smaller screens */
+        }
+
+
+/* Adjust the font size and padding for better mobile readability */
+
+.collapsible {
+                font-size: 16px;
+                padding: 10px;
+             }
+
+.collapsible::before {
+                        content: "\02795"; /* Unicode character for right-pointing triangle (closed) */
+                        float: right;
+                     }
+
+.active::before {
+                    content: "\2796"; /* Unicode character for right-pointing triangle (open) */
+                }
+
+.content {
+            padding: 0;
+            display: block;
+         }
+}
+
+/* Style the menu container */
+.menu {
+            background-color: #333;
+            overflow: hidden;
+      }
+        
+/* Style the menu items */
+
+.menu li {
+            float: right;
+            list-style: none;
+         }
+        
+.menu li a {
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+           }
+        
+.menu li a:hover {
+                   background-color: #555;
+                 }
+/* Section style */
+.section {
+    background-color: rgba(0, 51, 102, 0.5); /* Background color for highlighting */
+    padding: 10px; /* Add padding for spacing around the title */
+    text-align: left; /* Center-align the text */
+}
+
+.section h2 {
+    margin: 0; /* Remove default margin for the title */
+    color: #FFFFFF; /* Text color for the title */
+}
+
+/* Visitor counter */
+      .counter-wrapper {
+            text-align: right; /* Align the counter to the right */
+            padding: 20px; /* Add some padding to create space on the right */
+        }
+
+/* remove underline from hyperlink */
+a {
+            text-decoration: none;
+   }
+
+/* Typing effect Animation */
+/* Define the typing effect animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Apply the animation to the <p> element */
+.typing-effect p {
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden;   /* Hide overflowing text */
+    animation: typing 3s steps(100, end) 1s 1 normal both;
+}
+
+/* Continuing list number */
+       ol.start { 
+    counter-reset: mycounter; 
+}
+ol.start li, ol.continue li {
+    list-style: none;
+}
+ol.start li:before, ol.continue li:before { 
+    content: counter(mycounter) ". "; 
+    counter-increment: mycounter;
+}
+
+/* water-mark <p> element */
+
+    .watermark {
+            position: relative;
+            display: inline-block;
+        }
+
+        .watermark::after {
+            content: var(--watermark-content, "Year");
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            font-size: var(--watermark-font-size, 20px); /* Adjust the default font size as needed */
+        }
+
+        .watermark:hover::after {
+            opacity: 0.5;
+        }
+/* link-disabled color */
+.disabled {
+            pointer-events: none;
+            color: gray;
+            cursor: default;
+        }
+/* blininking text */
+.blinking-text {
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+/* Scroll content */
+.scroll-container {
+            height: 200px; /* Adjust based on the height of the container */
+            overflow: hidden;
+            position: relative;
+        }
+.scroll-content {
+            display: block;
+            position: absolute;
+            width: 100%;
+            animation: scroll linear infinite; /* Remove duration, it will be calculated dynamically */
+            bottom: 0; /* Start the content at the bottom */
+        }
+@keyframes scroll {
+            0% { transform: translateY(100%); }
+            100% { transform: translateY(-100%); } /* Scrolls up the height of the content */
+        }
